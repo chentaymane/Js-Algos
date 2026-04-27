@@ -1,13 +1,13 @@
-const is = {
-  num:    function(v) { return typeof v === 'number' },
-  nan:    function(v) { return Number.isNaN(v) },
-  str:    function(v) { return typeof v === 'string' },
-  bool:   function(v) { return typeof v === 'boolean' },
-  undef:  function(v) { return typeof v === 'undefined' },
-  def:    function(v) { return typeof v !== 'undefined' },
-  arr:    function(v) { return Array.isArray(v) },
-  obj:    function(v) { return typeof v === 'object' && !Array.isArray(v) },
-  fun:    function(v) { return typeof v === 'function' },
-  truthy: function(v) { return !!v },
-  falsy:  function(v) { return !v },
-}
+const is = {}
+
+  is.num=   function(v) { return typeof v === 'number' }
+  is.nan=    function(v) { return Number.isNaN(v) }
+  is.str=    function(v) { return typeof v === 'string' }
+  is.bool=   function(v) { return typeof v === 'boolean' }
+  is.undef=  function(v) { return typeof v === 'undefined' }
+  is.def=    function(v) { return typeof v !== 'undefined' }
+  is.arr=    function(v) { return Array.isArray(v) }
+  is.obj=    function(v) { return typeof v === 'object' && !Array.isArray(v) }
+  is.fun=    function(v) { return typeof v === 'function' }
+  is.truthy= function(v) { return !!v }
+  is.falsy=  function(v) { return !v }
