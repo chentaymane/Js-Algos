@@ -27,7 +27,7 @@ function mapToObj(data) {
 function objToArr(data) {
   const arr = []
   for (const key in data) {
-    arr.push([key, data[key]])
+    arr.push(data[key])
   }
   return arr
 }
