@@ -20,6 +20,10 @@ const nested = {
 
 Object.freeze(nested.arr)
 Object.freeze(nested.obj)
+Object.freeze(obj)
+Object.freeze(arr)
 
 
-//console.log(nested)
+/*nested.obj.str="by"
+
+console.log(nested)*/
