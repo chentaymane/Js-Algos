@@ -8,5 +8,5 @@ function sign (v){
 }
 
 function sameSign(v1,v2){
-    if (sign(v1) && sign(v2)){return true }else{return false}
+    if (sign(v1) === sign(v2)){return true }else{return false}
 }
