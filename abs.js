@@ -1,6 +1,8 @@
 function isPositive(v) {
   if (v < 0) {
     return false
+  } else if (v === 0) {
+    return false
   } else {
     return true
   }
