@@ -2,7 +2,7 @@ function arrToSet(data){
     return new Set(data)
 }
 function arrToStr(data) {
-    return data.toString()
+  return data.join('')
 }
 function setToArr(data){
     return Array.from(data)
