@@ -58,18 +58,21 @@ function strToObj(data) {
 }
 
 function superTypeOf(v) {
-  if (v instanceof Map)      return 'Map'
-  if (v instanceof Set)      return 'Set'
-  if (Array.isArray(v))      return 'Array'
-  if (v === null)            return 'null'
-  if (Number.isNaN(v))       return 'NaN'
-  return typeof v
+  if (v instanceof Map)        return 'Map'
+  if (v instanceof Set)        return 'Set'
+  if (Array.isArray(v))        return 'Array'
+  if (v === null)              return 'null'
+  if (v === undefined)         return 'undefined'
+  if (typeof v === 'object')   return 'Object'
+  if (typeof v === 'string')   return 'String'
+  if (typeof v === 'number')   return 'Number'
+  if (typeof v === 'boolean')  return 'Boolean'
+  if (typeof v === 'function') return 'Function'
 }
-
 
 const map = new Map()
 map.set('a', 1)
 map.set('b', 2)
 map.set(3, 'c')
 map.set(4, 'd')
-console.log(strToObj("fdfd"))
+console.log(superTypeOf({}))
