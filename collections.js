@@ -43,8 +43,8 @@ function objToMap (data){
 
 function arrToObj(data) {
   const obj = {}
-  for (const [key, value] of data) {
-    obj[key] = value
+  for (let i = 0; i < data.length; i++) {
+    obj[i] = data[i]
   }
   return obj
 }
@@ -68,4 +68,4 @@ map.set('a', 1)
 map.set('b', 2)
 map.set(3, 'c')
 map.set(4, 'd')
-console.log(objToMap({ x: 45,x:10, y: 75, radius: 24 }))
+console.log(arrToObj([4,8,6]))
