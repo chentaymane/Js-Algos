@@ -1,27 +1,22 @@
+const escapeStr = "\`\\\/" + "\"\'";
 
+const arr = Object.freeze([4, '2']);
 
-const escapeStr = "\`\\\/\"\'" ;
-const arr = [4,'2'] ;
-const obj ={
-    str : "string" ,
-    num : 10 ,
-    bool : true ,
-    undef : undefined
-}
+const obj = Object.freeze({
+  str: "string",
+  num: 10,
+  bool: true,
+  undef: undefined
+});
 
-const nested = {
-  arr: [4, undefined, '2'],
-  obj: {
+const nested = Object.freeze({
+  arr: Object.freeze([4, undefined, '2']),
+  obj: Object.freeze({
     str: "hello",
     num: 42,
     bool: true
-  }
-};
-
-Object.freeze(nested.arr)
-Object.freeze(nested.obj)
-Object.freeze(obj)
-Object.freeze(arr)
+  })
+});
 
 
 /*nested.obj.str="by"
