@@ -50,7 +50,11 @@ function arrToObj(data) {
 }
 
 function strToObj(data) {
-  return JSON.parse(data)
+   const obj = {}
+  for (let i = 0; i < data.length; i++) {
+    obj[i] = data[i]
+  }
+  return obj
 }
 
 function superTypeOf(v) {
@@ -68,4 +72,4 @@ map.set('a', 1)
 map.set('b', 2)
 map.set(3, 'c')
 map.set(4, 'd')
-console.log(arrToObj([4,8,6]))
+console.log(strToObj(`2${ctx[0]}2`))
