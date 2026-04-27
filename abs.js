@@ -7,7 +7,7 @@ function isPositive(v) {
 }
 
 function abs(v) {
-    if (v==0 ){
+    if (v === 0 ){
        return 0
     
     }else if(!isPositive(v)){
