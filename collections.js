@@ -8,7 +8,7 @@ function setToArr(data){
     return Array.from(data)
 }
 function setToStr(data) {
-    return data.toString()
+  return Array.from(data).join('')
 }
 function strToArr(data){
     return data.split("")
