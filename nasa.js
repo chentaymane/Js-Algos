@@ -2,17 +2,17 @@ function nasa(n) {
     var result =""
     for (let i = 1 ; i<=n ; i++ ){
         if (i%5 ===0 && i%3 ===0){
-            result += "NASA"
+            result += "NASA" + " "
         }else if (i%5===0 ){
-            result += "SA"
+            result += "SA" +" "
         }else if (i%3 ===0){
-                result += "NA"
+                result += "NA" + " "
         }else {
 
-            result += i.toString()
+            result += i.toString()+" "
         }
     }
-    return result
+    return result.slice(0,-1)
 }
 
 console.log(nasa(15))
