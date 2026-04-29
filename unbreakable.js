@@ -11,8 +11,8 @@ function split(str, splt) {
       
         var beginIndex = str.indexOf(splt,from)
      
-           console.log(beginIndex)
-           console.log(i)
+           //console.log(beginIndex)
+          // console.log(i)
         if (i != beginIndex){
             tempStr += str[i]
         }else{
@@ -29,11 +29,11 @@ function split(str, splt) {
                  from = beginIndex+1
         }
     }
-     if (tempStr.length>0) {
+   
 
          array.push(tempStr)
        
-        }
+        
         
     return array
     
@@ -56,3 +56,4 @@ var result = ""
 }
 
 console.log(join(["Fire", "Air", "Water"],","))
+console.log(split('ee,ff,g,', ','))
