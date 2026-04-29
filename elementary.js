@@ -34,15 +34,16 @@ function  divide(a,b) {
         negative ++
     }
     while (a != 0 ){
-        a = a-b 
-        if (a< b ){
+         if (a< b ){
             if( negative === 1 ) {
                 
                 return(-count) 
             }
             return(count) 
         }
+        a = a-b 
         count++
+       
     }
    
 }
@@ -76,4 +77,4 @@ function  modulo(a,b) {
 
 //console.log(multiply(34, 78))
 //return(modulo(-5 , -1 ))
-console.log(divide(34, 78))
+console.log(divide(22, 34))
