@@ -9,7 +9,7 @@ function indexOf(arr , item , indxSearch =0) {
 
 function lastIndexOf(arr , item , indxSearch =arr.length ) {
             
-    for (let i = indxSearch -1; i>= 0 ; i--){
+    for (let i = indxSearch ; i>= 0 ; i--){
         if (arr[i] === item) {
             return i
         }
@@ -23,4 +23,4 @@ function includes(arr , item) {
     return false 
 }
 
-console.log(includes([0,5,8,4,9,7,6,4,] , 2 ))
+console.log(lastIndexOf([0, 0, t, t], t, 3))
