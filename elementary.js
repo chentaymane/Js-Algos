@@ -57,7 +57,7 @@ function  modulo(a,b) {
     }
     if(b<0) {
         b = -b
-        negative ++
+     
     }
       var result = a
      
@@ -83,4 +83,4 @@ function  modulo(a,b) {
 
 //console.log(multiply(34, 78))
 //return(modulo(-5 , -1 ))
-console.log(modulo(-123, 22) )
+console.log(modulo(123,- 22) )
