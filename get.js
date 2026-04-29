@@ -7,10 +7,10 @@ return undefined
         }
         src = src[p]
     }
-    console.log(src) 
+    return src 
 }
 /*
 const src = { nested: { key: 'peekaboo' } }
 const path = 'nested.key'
-get(src, path) // -> 'peekaboo'
+get({ key: 'value' }, 'key') // -> 'peekaboo'
 */
