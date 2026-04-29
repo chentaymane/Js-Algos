@@ -5,7 +5,13 @@ function split(str, splt) {
 
 
     var from =0
-
+  if (splt === "") {
+        var chars = []
+        for (let i = 0; i < str.length; i++) {
+            chars.push(str[i])
+        }
+        return chars
+    }
 
     for(let i =0 ; i< str.length ; i++){
       
@@ -13,20 +19,20 @@ function split(str, splt) {
      
            //console.log(beginIndex)
           // console.log(i)
+
+          
         if (i != beginIndex){
             tempStr += str[i]
         }else{
-             if (tempStr.length>0) {
+            
 
          
                  array.push(tempStr)
                  tempStr = ""
                  
-                 
-                }
+                
                  i+=splt.length-1
-                 
-                 from = beginIndex+1
+                 from = i+1
         }
     }
    
@@ -56,4 +62,4 @@ var result = ""
 }
 
 console.log(join(["Fire", "Air", "Water"],","))
-console.log(split('ee,ff,g,', ','))
+console.log(split('rrrr', 'rr'))
