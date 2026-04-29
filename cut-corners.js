@@ -1,3 +1,5 @@
+
+
 function trunc(n) {
     if (Object.is(n, -0)) return -0
     if (n === Infinity) return Infinity
@@ -9,6 +11,9 @@ function trunc(n) {
     }
    
     var n2 = 0
+       while ((n2 +1)* 10 <= n) {
+        n2 *= 10
+    }
     while (n2 + 1 <= n) {
         n2++
     }
@@ -77,3 +82,8 @@ function round(n) {
 }
 
 
+const nums = [3.7, -3.7, 3.1, -3.1]
+console.log(nums.map(round))
+console.log(nums.map(floor))
+console.log(nums.map(trunc))
+console.log(nums.map(ceil))
