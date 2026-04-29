@@ -1,7 +1,9 @@
 function repeat(str , num){
+    var result =""
     for (let i = 0 ; i< num ; i++) {
-        console.log(str)
+        result += str
     }
+    return result
 }
 
-repeat("aa" , 4)
+console.log(repeat("a" , 4))
