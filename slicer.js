@@ -5,7 +5,7 @@ function slice(proces , startIndex , endIndex = proces.length-1) {
     if (startIndex<0 ){
 startIndex=proces.length+startIndex
     }
-    for (let i = startIndex ; i<= endIndex ; i++ ){
+    for (let i = startIndex ; i< endIndex ; i++ ){
         if (typeof proces === "string"){
             resultStr+=proces[i]
             str = true
@@ -20,4 +20,4 @@ startIndex=proces.length+startIndex
     return resultArr
 }
 
-console.log(slice('abcdef', -2) )
+console.log(slice('abcdef', 0 , 2) )
