@@ -74,6 +74,6 @@ function  modulo(a,b) {
 
 
 
-multiply(34, 78)
+//multiply(34, 78)
 //console.log(modulo(-5 , -1 ))
 //console.log(divide(-10 , 1 ))
