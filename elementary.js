@@ -15,9 +15,9 @@ result+=a
     }
     if( negative === 1 ) {
 
-        console.log(-result) 
+        return(-result) 
     }
-    console.log(result) 
+    return(result) 
 }
 
 function  divide(a,b) {
@@ -39,9 +39,9 @@ function  divide(a,b) {
         if (a< b ){
              if( negative === 1 ) {
 
-        console.log(-count) 
+        return(-count) 
     }
-            console.log(count) 
+            return(count) 
         }
     }
    
@@ -62,18 +62,18 @@ function  modulo(a,b) {
     while (result != 0 ){
         result = result-b 
         if (result< b ){
-            console.log(result) 
+            return(result) 
         }
     }
       
    
-     console.log(0) 
+     return(0) 
 
 
 }
 
 
 
-//multiply(34, 78)
-//console.log(modulo(-5 , -1 ))
-//console.log(divide(-10 , 1 ))
+//console.log(multiply(34, 78))
+//return(modulo(-5 , -1 ))
+//return(divide(-10 , 1 ))
