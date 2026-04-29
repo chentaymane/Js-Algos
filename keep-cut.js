@@ -18,6 +18,10 @@ function keepLast(str) {
     return str.slice(-2)
 }
 function keepFirstLast(str) {
-    return str.slice(0,2)+str.slice(-2)
+    if (str.length > 4){
+
+        return str.slice(0,2)+str.slice(-2)
+    }
+    return str
 }
-console.log(keepFirstLast("zdfll"))
+console.log(cutFirstLast("af"))
