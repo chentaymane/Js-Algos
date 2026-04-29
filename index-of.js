@@ -1,5 +1,5 @@
-function indexOf(arr , item , indxSearch =0) {
-    for (let i = indxSearch ; i< arr.length ; i++){
+function indexOf(arr , item , indxSearch = 0) {
+    for (let i = indxSearch ; i < arr.length ; i++){
         if (arr[i] === item) {
             return i
         }
@@ -7,20 +7,21 @@ function indexOf(arr , item , indxSearch =0) {
     return -1
 }
 
-function lastIndexOf(arr , item , indxSearch =arr.length ) {
-            
-    for (let i = indxSearch ; i>= 0 ; i--){
+function lastIndexOf(arr , item , indxSearch = arr.length - 1) {
+    if (indxSearch >= arr.length) {
+        indxSearch = arr.length - 1
+    }
+
+    for (let i = indxSearch ; i >= 0 ; i--){
         if (arr[i] === item) {
             return i
         }
     }
     return -1
 }
+
 function includes(arr , item) {
-    if (indexOf(arr , item )!= -1){
-        return true 
-    }
-    return false 
+    return indexOf(arr , item) !== -1
 }
 
-console.log(lastIndexOf([0, 0, t, t], t, 3))
+console.log(lastIndexOf([0, 0, 1, 1], 1, 3))
