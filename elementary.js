@@ -1,25 +1,61 @@
 function multiply(a , b ){
     var result = 0
+    negative =0
+    if (a<0) {
+        a = -a
+        negative ++
+    }
+    if(b<0) {
+        b = -b
+        negative ++
+    }
+
     for (let i = 0 ; i<b ; i++ ){
 result+=a
+    }
+    if( negative === 1 ) {
+
+        return -result
     }
     return result
 }
 
 function  divide(a,b) {
-     var result = a
+    
      var count = 0 
-    while (result != 0 ){
-        result = result-b 
+       var      negative =0
+
+      if (a<0) {
+        a = -a
+        negative ++
+    }
+    if(b<0) {
+        b = -b
+        negative ++
+    }
+    while (a != 0 ){
+        a = a-b 
         count++
-        if (result< b ){
+        if (a< b ){
+             if( negative === 1 ) {
+
+        return -count
+    }
             return count
         }
     }
-    return count
+   
 }
 
 function  modulo(a,b) {
+     if (a<0) {
+        a = -a
+        
+    }
+    if(b<0) {
+        b = -b
+        
+    }
       var result = a
      
 
@@ -38,6 +74,6 @@ function  modulo(a,b) {
 
 
 
-//console.log(multiply(5 , 3 ))
-//console.log(modulo(5 , 1 ))
-console.log(divide(10 , 2 ))
+//console.log(multiply(-123, 22))
+console.log(modulo(-5 , -1 ))
+//console.log(divide(-10 , 1 ))
