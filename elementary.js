@@ -1,6 +1,6 @@
 function multiply(a , b ){
     var result = 0
-    negative =0
+    var negative =0
     if (a<0) {
         a = -a
         negative ++
