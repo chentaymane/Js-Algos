@@ -99,18 +99,13 @@ function trunc(n) {
 
 
 
-//console.log(round(-15.0005) , Math.round(-15.0005))
-//console.log(ceil(15.55) , Math.ceil(15.55))
+const nums = [3.7, -3.7, 3.1, -3.1]
+console.log(nums.map(round))
+console.log(nums.map(floor))
+console.log(nums.map(trunc))
+console.log(nums.map(ceil))
 
-
-console.log(trunc(-Infinity),Math.trunc(-Infinity))
-console.log(trunc(-45.95),Math.trunc(-45.95))
-console.log(trunc(-45.05),Math.trunc(-45.05))
-console.log(trunc(-0),Math.trunc(-0))// -0 -0
-console.log(trunc(-0,648),Math.trunc(-0,648))// -0 -0
-console.log(trunc(0),Math.trunc(0))
-console.log(trunc(4),Math.trunc(4))
-console.log(trunc(45.05),Math.trunc(45.05))
-console.log(trunc(45.95),Math.trunc(45.95))
-console.log(trunc(Infinity),Math.trunc(Infinity))
-console.log(-1*0)
+/*[ 4, -4, 3, -3 ]
+[ 3, -4, 3, -4 ]
+[ 3, -3, 3, -3 ]
+[ 4, -3, 4, -3 ]*/
