@@ -61,10 +61,10 @@ function  modulo(a,b) {
      
 
     while (result != 0 ){
-        result = result-b 
         if (result< b ){
             return(result) 
         }
+        result = result-b 
     }
       
    
@@ -77,4 +77,4 @@ function  modulo(a,b) {
 
 //console.log(multiply(34, 78))
 //return(modulo(-5 , -1 ))
-console.log(divide(22, 34))
+console.log(modulo(34, 78))
