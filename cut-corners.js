@@ -9,18 +9,19 @@ function trunc(n) {
         n = -n
         sign = -1
     }
-   
     var n2 = 0
-       while ((n2 +1)* 10 <= n) {
-        n2 *= 10
+    var step = 1
+    while (step * 10 <= n) {
+        step *= 10
     }
-    while (n2 + 1 <= n) {
-        n2++
+    while (step >= 1) {
+        while (n2 + step <= n) {
+            n2 += step
+        }
+        step /= 10
     }
-    
     return sign * n2
 }
-
 function floor(n) {
     if (Object.is(n, -0)) return -0
     if (n === Infinity) return Infinity
@@ -81,3 +82,4 @@ function round(n) {
     }
 }
 
+console.log(round(0xfffffffff + 0.56))
