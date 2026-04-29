@@ -1,4 +1,4 @@
-function slice(proces , startIndex , endIndex = proces.length-1) {
+function slice(proces , startIndex , endIndex = proces.length) {
     var resultStr =""
       var resultArr =[]
     var str = false
@@ -20,4 +20,4 @@ startIndex=proces.length+startIndex
     return resultArr
 }
 
-console.log(slice('abcdef', 0 , 2) )
+console.log(slice('abcdef', 2) )
