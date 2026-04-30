@@ -1,3 +1,4 @@
+
 function findExpression(to, from = 1, path = "1") {
 
     if (from === to) {
@@ -17,4 +18,4 @@ function findExpression(to, from = 1, path = "1") {
     return tryAdd
 }
 
-console.log(findExpression(8))
+console.log(findExpression(14))
