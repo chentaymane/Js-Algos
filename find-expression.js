@@ -10,16 +10,14 @@ function findExpression(from, to, path) {
     }
 
   
-    let tryMul = findExpression(from * 2, to, path + " *2")
+    let tryMul = findExpression(from * 2, to, path +mul2)
 
     if (tryMul !== undefined) {
         return tryMul
     }
 
   
-    let tryAdd = findExpression(from + 4, to, path + " +4")
+    let tryAdd = findExpression(from + 4, to, path + add4)
 
     return tryAdd
 }
-
-console.log(findExpression(1, 12, "1"))
