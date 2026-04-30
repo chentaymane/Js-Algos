@@ -10,21 +10,7 @@ function flat(arr , n=1) {
         }
      
     }
-  /* var i = 0
-   var j = 0
-   while (n!=0 ){
-       if ( Array.isArray(arr[i]) ){
-          n--
-           
-           result.push(...arr[i])
-          
-           var sub = flat(arr[i],n)
-         
-        }else {     
-            result.push(arr[i])
-        }
-        i++
-   }*/
+  
     return result
 }
 
