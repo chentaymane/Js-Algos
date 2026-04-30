@@ -1,4 +1,4 @@
-function flat(arr , n) {
+function flat(arr , n=arr.length) {
     var result = []
     
     for (let i = 0 ; i<arr.length ; i++ ) {
@@ -28,4 +28,4 @@ function flat(arr , n) {
     return result
 }
 
-console.log(flat([1, [2, [3, 4]], 5], 1))
+console.log(flat([1, [2]]))
