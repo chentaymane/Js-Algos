@@ -1,5 +1,3 @@
-const add4 = '+4'
-const mul2 = '*2'
 
 function findExpression(to, from = 1, path = "1") {
 
