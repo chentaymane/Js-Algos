@@ -1,4 +1,4 @@
-const vowels =/[a-e-i-o-u]/
+const vowels =/a|e|i|o|u/
 function vowelDots(str) {
     var result =""
     for  (let c of str){
@@ -11,4 +11,4 @@ function vowelDots(str) {
     
 }
 
-console.log(vowelDots("seas"))
+console.log(vowels.test("seas"))
