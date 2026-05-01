@@ -4,7 +4,7 @@ function ionOut(str) {
     var result = []
     for (let c of arr ){
         if (reg.test(c)) {
-            result.push(c.replace(reg,""))
+            result.push(c.replace(reg,"t"))
         }
     }
     return result
