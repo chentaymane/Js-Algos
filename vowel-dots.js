@@ -1,10 +1,10 @@
+const vowels =/[a-e-i-o-u]/
 function vowelDots(str) {
-    const vowels =/[a-e-i-o-u]/
     var result =""
     for  (let c of str){
         result += c
         if (vowels.test(c)){
-            result += "a ."
+            result += "."
         }
     }
     return result
