@@ -1,5 +1,5 @@
 function ionOut(str) {
-    const reg = /tion$/
+    const reg = /tion\W?$/
     var arr = str.split(" ")
     var result = []
     for (let c of arr ){
@@ -10,4 +10,4 @@ function ionOut(str) {
     return result
 }
 
-console.log(ionOut("attention action station"))
+console.log(ionOut('attention, direction'))
