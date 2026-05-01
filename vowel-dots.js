@@ -1,4 +1,4 @@
-const vowels =/a|e|i|o|u/
+const vowels =/a|e|i|o|u|A|E|I|O|U/
 function vowelDots(str) {
     var result =""
     for  (let c of str){
