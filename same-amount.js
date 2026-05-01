@@ -1,11 +1,11 @@
 
     function sameAmount(str,rg1,rg2) {
      
-        var count1 = str.match(rg1)
+        var count1 = str.match(new RegExp(rg1, "g"))
         if (count1 === null) {
             count1 = []
         }
-        var count2 = str.match(rg2)
+        var count2 = str.match(new RegExp(rg2, "g"))
          if (count2 === null) {
             count2 = []
         }
