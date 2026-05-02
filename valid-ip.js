@@ -1,6 +1,19 @@
 function findIP(str) {
-  const reg = /\b(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])\.(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])\.(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])\.(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])(:(6553[0-5]|655[0-2][0-9]|65[0-4][0-9]{2}|6[0-4][0-9]{3}|[1-5][0-9]{4}|[1-9][0-9]{0,3}))?\b/g
+  const results = [];
+  const matches = str.match(/[\d.:]+/g) || [];
 
-  return str.match(reg) || [];
+  for (const part of matches) {
+    const [host, port] = part.split(':');
+    const octets = host.split('.');
+
+    if (octets.length !== 4) continue;
+
+    if (!octets.every(o => o === String(+o) && +o >= 0 && +o <= 255)) continue;
+
+    if (port && (+port < 1 || +port > 65535)) continue;
+
+    results.push(part);
+  }
+
+  return results;
 }
-console.log(findIP("hello 192.255.1.1 test 10.0.0.1:8080 bad 256.1.1.1 255.255.255.0 0.0.0.0:6876"))
