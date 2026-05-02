@@ -1,5 +1,5 @@
 function getURL(str){
-    const reg = /\bhttps?:\/\/[^\s]+/g
+    const reg = /https?:\/\/[^\s]+/g
     return str.match(reg)
 }
 
@@ -35,4 +35,4 @@ var URLs = getURL(str)
 }
 
 
-console.log(getURL(   'qqq http:// qqqq q qqqqq https://something.com/hello qqqqqqq qhttp://example.com/hello?you=something&something=you '))
+console.log(getURL(      'https://regex-performance.github.io/exercises.html'))
