@@ -1,28 +1,6 @@
 function findIP(str) {
-  const results = [];
-  const parts = str.split(/\s+/);
+  const reg = /\b(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])\.(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])\.(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])\.(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])(:(6553[0-5]|655[0-2][0-9]|65[0-4][0-9]{2}|6[0-4][0-9]{3}|[1-5][0-9]{4}|[1-9][0-9]{0,3}))?\b/g
 
-  for (const part of parts) {
-    const [host, port] = part.split(':');
-    const octets = host.split('.');
-
-    if (octets.length !== 4) continue;
-
-    const validIP = octets.every(o => {
-      if (o !== String(parseInt(o, 10))) return false; // rejects leading zeros
-      const n = parseInt(o, 10);
-      return n >= 0 && n <= 255;
-    });
-
-    if (!validIP) continue;
-
-    if (port !== undefined) {
-      const p = parseInt(port, 10);
-      if (isNaN(p) || p < 1 || p > 65535) continue;
-    }
-
-    results.push(part);
-  }
-
-  return results;
+  return str.match(reg) || [];
 }
+console.log(findIP("hello 192.255.1.1 test 10.0.0.1:8080 bad 256.1.1.1 255.255.255.0 0.0.0.0:6876"))
