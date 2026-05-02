@@ -1,5 +1,5 @@
 function getURL(str){
-    const reg = /\bhttps?:\/\/[^\s]+\b/g
+    const reg = /\bhttps?:\/\/[^\s]+/g
     return str.match(reg)
 }
 
@@ -10,8 +10,9 @@ function greedyQuery(str){
     for (let i = 0 ; i<URLs.length;i++){
     var temp = []
             temp =  URLs[i].match(param)
+            if (!temp) continue
             if (temp[0]!= null && temp[0].split("&").length >=3  ){
-                result += URLs[i]
+               result.push(URLs[i])
             }
     }
    return result
@@ -25,12 +26,13 @@ var URLs = getURL(str)
     for (let i = 0 ; i<URLs.length;i++){
             var temp = []
             temp =  URLs[i].match(param)
+            if (!temp) continue
             if (temp[0]!= null && temp[0].split("&").length >=2 && temp[0].split("&").length <=3  ){
-                result += URLs[i]
+               result.push(URLs[i])
             }
     }
    return result
 }
 
 
-console.log(greedyQuery(   'http://hummm/how?how=come&same=[123,21]&you=nextperson&id=123312&next=123DSAD&ok=true&notOk=true'))
+console.log(getURL(   'qqq http:// qqqq q qqqqq https://something.com/hello qqqqqqq qhttp://example.com/hello?you=something&something=you '))
