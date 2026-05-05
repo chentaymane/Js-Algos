@@ -1,5 +1,11 @@
 function isValid(date) {
-    return date != "Invalid Date"
+   
+    if (date instanceof Date){
+        return !isNaN(date)
+    } else if (typeof date === "number") {
+        return !isNaN(new Date(date))
+    }
+    return false 
 }
 
 function isAfter(d1,d2) {
@@ -15,3 +21,5 @@ function isFuture(d1,d2) {
 function isPast(d1,d2) {
     return isValid(d1)&& isBefore(d1,Date.now())
 }
+
+console.log(isValid())
