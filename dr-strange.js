@@ -1,12 +1,16 @@
 function addWeek(date) {
-    const months = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday",
-"secondMonday", "secondTuesday", "secondWednesday", "secondThursday",
-"secondFriday", "secondSaturday", "secondSunday"];
-    datee = new Date(date) 
-    day = months[(datee.getUTCDate()-1)%14]
-    console.log(day);
-}
+    const days = [
+        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday",
+        "secondMonday", "secondTuesday", "secondWednesday", "secondThursday",
+        "secondFriday", "secondSaturday", "secondSunday"
+    ];
 
+    const anchor = new Date('0001-01-01');
+    const diff = date - anchor;
+    const dayIndex = ((Math.floor(diff / (1000 * 60 * 60 * 24)) % 14) + 14) % 14;
+
+    return days[dayIndex];
+}
 
 function timeTravel(date) {
     let date2 = new Date(date.date)
@@ -29,6 +33,6 @@ addWeek(new Date("0001-01-02")); // Output: 'Tuesday'
 addWeek(new Date("0001-01-07")); // Output: 'Sunday'
 addWeek(new Date("0001-01-08")); // Output: 'secondMonday'
 addWeek(new Date("0001-01-09")); // Output: 'secondTuesday')
-//console.log(26%14)
 */
+console.log(addWeek(new Date('0001-01-01')))
     
