@@ -10,10 +10,10 @@ export function pimp() {
             i++
             if (i === styles.length) unpimp = true
         }else{
+            but.classList.add('unpimp')
             i--
             
             but.classList.remove(styles[i])
-            but.classList.add('unpimp')
             if (i === 0) unpimp =false 
         }
     
