@@ -4,7 +4,7 @@ export function generateLetters() {
     let fontSize = 11;
     let fontWeight = 300;
 
-    for (let i = 0; i < 120; i++) {
+    for (let i = 1; i <= 120; i++) {
 
         let char = characters[Math.floor(Math.random() * characters.length)];
 
@@ -14,7 +14,7 @@ export function generateLetters() {
         divo.style.fontSize = fontSize + "px";
 
         if (i >= 80) {
-            fontWeight = 800;
+            fontWeight = 600;
         } else if (i >= 40) {
             fontWeight = 400;
         } else {
