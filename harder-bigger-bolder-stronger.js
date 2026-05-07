@@ -4,7 +4,7 @@ export function generateLetters() {
     let fontSize = 11;
     let fontWeight = 300;
 
-    for (let i = 1; i <= 120; i++) {
+    for (let i = 0; i < 120; i++) {
 
         let char = characters[Math.floor(Math.random() * characters.length)];
 
