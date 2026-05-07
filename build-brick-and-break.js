@@ -5,7 +5,7 @@ let i = 0
         let block = document.createElement("div")
         block.id = `brick-${i}`
         
-        if (i % 2 === 0) {
+        if (i % 3 === 2 ) {
             block.dataset.foundation = "true"
         }
         block.textContent=i
