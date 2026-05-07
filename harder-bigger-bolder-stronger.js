@@ -1,7 +1,7 @@
 export function generateLetters() {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-    let fontSize = 10;
+    let fontSize = 11;
     let fontWeight = 300;
 
     for (let i = 1; i <= 120; i++) {
@@ -11,7 +11,7 @@ export function generateLetters() {
         let divo = document.createElement("div");
         divo.textContent = char;
 
-        divo.style.fontSize = fontSize++ + "px";
+        divo.style.fontSize = fontSize + "px";
 
         if (i > 80) {
             fontWeight = 800;
@@ -22,7 +22,7 @@ export function generateLetters() {
         }
 
         divo.style.fontWeight = fontWeight;
-
         document.body.appendChild(divo);
+        fontSize++
     }
 }
