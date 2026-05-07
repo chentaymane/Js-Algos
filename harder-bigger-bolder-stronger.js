@@ -13,9 +13,9 @@ export function generateLetters() {
 
         divo.style.fontSize = fontSize + "px";
 
-        if (i > 80) {
+        if (i >= 80) {
             fontWeight = 800;
-        } else if (i > 40) {
+        } else if (i >= 40) {
             fontWeight = 400;
         } else {
             fontWeight = 300;
