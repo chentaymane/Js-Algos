@@ -19,7 +19,7 @@ export function getActive() {
 }
 
 export function getBonannoPisano() {
-     let BonannoPisano = document.querySelectorAll('#BonannoPisano')
+     let BonannoPisano = document.getElementById('BonannoPisano')
     let nonActive = document.querySelectorAll('a.classical.active')
     return [BonannoPisano,nonActive]
 }
