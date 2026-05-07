@@ -24,7 +24,7 @@ export function pimp() {
 
         if (i === 0) {
             unpimp = false;
-             but.classList.add('unpimp');
+             but.classList.remove('unpimp');
         }
     }
 }
