@@ -18,7 +18,7 @@ export function getActive() {
     return [active,nonActive]
 }
 
-function getBonannoPisano() {
+export function getBonannoPisano() {
      let BonannoPisano = document.querySelectorAll('#BonannoPisano')
     let nonActive = document.querySelectorAll('a.classical.active')
     return [BonannoPisano,nonActive]
