@@ -6,12 +6,6 @@ let i = 0;
 export function pimp() {
     let but = document.querySelector('.button');
 
-    if (unpimp) {
-        but.classList.add('unpimp');
-    } else {
-        but.classList.remove('unpimp');
-    }
-
     if (!unpimp) {
         // ADD MODE
         but.classList.add(styles[i]);
@@ -19,6 +13,7 @@ export function pimp() {
 
         if (i === styles.length) {
             unpimp = true;
+            but.classList.add('unpimp');
         }
 
     } else {
@@ -29,6 +24,7 @@ export function pimp() {
 
         if (i === 0) {
             unpimp = false;
+             but.classList.add('unpimp');
         }
     }
 }
