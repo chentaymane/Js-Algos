@@ -29,10 +29,10 @@ export function moveCircle() {
            
             let boxRect = document.querySelector('.box').getBoundingClientRect()
             let inside =
-            e.clientX-24 > boxRect.left &&
-            e.clientX +26 < boxRect.right &&
-            e.clientY -24 >boxRect.top &&
-            e.clientY+26 < boxRect.bottom
+            e.clientX-25 > boxRect.left &&
+            e.clientX +25 < boxRect.right &&
+            e.clientY -25 >boxRect.top &&
+            e.clientY+25 < boxRect.bottom
             if (!trapped) {
                 div.style.left = e.clientX - 25 + 'px';
                 div.style.top = e.clientY - 25 + "px";
