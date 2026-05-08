@@ -10,7 +10,7 @@ export function createCircle() {
 
         div.style.left = e.clientX-25 + "px";
         div.style.top = e.clientY-25 + "px";
-        div.style.backgroundColor='white'
+        div.style.background='white'
           div.dataset.block = "false";
         div.classList.add('circle')
 
@@ -38,7 +38,7 @@ export function moveCircle() {
                 div.style.top = e.clientY - 25 + "px";
                 if (inside) {
                     trapped = true 
-                    div.style.backgroundColor = 'var(--purple)'
+                    div.style.background = 'var(--purple)'
                 }
             }else {
                  if (inside) {                  
