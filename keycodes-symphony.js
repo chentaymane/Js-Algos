@@ -1,29 +1,30 @@
 export function compose() {
 
-function CreateStyle() {
+    function CreateStyle() {
 
-    let style = document.createElement('style');
+        let style = document.createElement('style');
 
-    let css = '';
+        let colors = [
+            "red", "blue", "green", "purple", "orange", "pink",
+            "cyan", "brown", "gold", "navy", "teal", "lime",
+            "magenta", "violet", "indigo", "coral", "salmon",
+            "khaki", "plum", "olive", "turquoise", "chocolate",
+            "crimson", "orchid", "tan", "silver"
+        ];
 
-    for (let i = 0; i < 26; i++) {
+        let css = '';
 
-        let letter = String.fromCharCode(97 + i);
+        for (let i = 0; i < 26; i++) {
+            let letter = String.fromCharCode(97 + i);
 
-        let r = 255;                 // strong red
-        let g = 50 + i * 4;          // slowly increases green
-        let b = 150 + i * 3;         // slowly increases blue
-
-        css += `
-.${letter} {
-    background-color: rgb(${r}, ${g}, ${b});
-}
+            css += `
+.${letter} { background-color: ${colors[i]}; }
 `;
-    }
+        }
 
-    style.textContent = css;
-    document.head.appendChild(style);
-}
+        style.textContent = css;
+        document.head.appendChild(style);
+    }
 
     CreateStyle(); 
     document.addEventListener('keydown', (e) => {
