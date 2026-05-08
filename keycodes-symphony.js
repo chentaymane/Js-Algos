@@ -1,32 +1,6 @@
 export function compose() {
 
-    function CreateStyle() {
-
-        let style = document.createElement('style');
-
-        let colors = [
-            "red", "blue", "green", "purple", "orange", "pink",
-            "cyan", "brown", "gold", "navy", "teal", "lime",
-            "magenta", "violet", "indigo", "coral", "salmon",
-            "khaki", "plum", "olive", "turquoise", "chocolate",
-            "crimson", "orchid", "tan", "silver"
-        ];
-
-        let css = '';
-
-        for (let i = 0; i < 26; i++) {
-            let letter = String.fromCharCode(97 + i);
-
-            css += `
-.${letter} { background-color: ${colors[i]}; }
-`;
-        }
-
-        style.textContent = css;
-        document.head.appendChild(style);
-    }
-
-    CreateStyle(); 
+ 
     document.addEventListener('keydown', (e) => {
 
         let divs = document.querySelectorAll('.note');
@@ -42,13 +16,21 @@ export function compose() {
             return;
         }
 
-        if (/^[a-z]$/.test(e.key)) {
+      if (/^[a-z]$/.test(e.key)) {
 
-            let div = document.createElement('div');
-            div.classList.add('note', e.key);
-            div.textContent = e.key;
+        let div = document.createElement("div");
+        div.classList.add("note", e.key);
+        div.textContent = e.key;
 
-            document.body.appendChild(div);
-        }
+        let index = e.key.charCodeAt(0) - 97;
+
+        div.style.backgroundColor = `rgb(
+            ${index * 10 % 255},
+            ${index * 20 % 255},
+            ${255 - index * 8}
+        )`;
+
+        document.body.appendChild(div);
+    }
     });
 }
