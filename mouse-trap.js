@@ -1,61 +1,62 @@
-
-let div = null
-let trapped = false 
+let div = null;
+let trapped = false;
 
 export function createCircle() {
-
     document.addEventListener('click', (e) => {
 
-         div = document.createElement('div');
+        div = document.createElement('div');
+        div.classList.add('circle');
 
-        div.style.left = e.clientX-25 + "px";
-        div.style.top = e.clientY-25 + "px";
-        div.style.background='white'
-          div.dataset.block = "false";
-        div.classList.add('circle')
+        div.style.background = 'white';
+        div.style.left = e.clientX - 25 + 'px';
+        div.style.top = e.clientY - 25 + 'px';
 
         document.body.append(div);
-        trapped = false
+        trapped = false;
     });
-    
-
 }
+
 export function moveCircle() {
 
     document.addEventListener('mousemove', (e) => {
-            if (!div) return;
 
-            
-           
-           const circleRect = div.getBoundingClientRect();
-const boxRect = document.querySelector('.box').getBoundingClientRect();
+        if (!div) return;
 
-const inside =
-    circleRect.left >= boxRect.left + 1 &&
-    circleRect.right <= boxRect.right - 1 &&
-    circleRect.top >= boxRect.top + 1 &&
-    circleRect.bottom <= boxRect.bottom - 1;
-            if (!trapped) {
-                div.style.left = e.clientX - 25 + 'px';
-                div.style.top = e.clientY - 25 + "px";
-                if (inside) {
-                    div.style.background = 'var(--purple)'
-                    trapped = true 
-                }
-            }else {
-                 if (inside) {                  
-                    div.style.left = e.clientX - 25 + 'px';
-                    div.style.top = e.clientY - 25 + "px";
-                }
+        const box = document.querySelector('.box').getBoundingClientRect();
+
+        const nextLeft = e.clientX - 25;
+        const nextTop = e.clientY - 25;
+        const nextRight = e.clientX + 25;
+        const nextBottom = e.clientY + 25;
+
+        const inside =
+            nextLeft > box.left + 1 &&
+            nextRight < box.right - 1 &&
+            nextTop > box.top + 1 &&
+            nextBottom < box.bottom - 1;
+
+        if (!trapped) {
+
+            div.style.left = nextLeft + 'px';
+            div.style.top = nextTop + 'px';
+
+            if (inside) {
+                trapped = true;
+                div.style.background = 'var(--purple)';
             }
-                
+
+        } else {
+
+            if (inside) {
+                div.style.left = nextLeft + 'px';
+                div.style.top = nextTop + 'px';
+            }
+        }
     });
 }
 
-
 export function setBox() {
-    let box = document.createElement('div')
-    box.classList.add('box')
-    document.body.append(box)
-    
+    const box = document.createElement('div');
+    box.classList.add('box');
+    document.body.append(box);
 }
