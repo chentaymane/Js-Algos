@@ -27,18 +27,20 @@ export function moveCircle() {
 
             
            
-            let boxRect = document.querySelector('.box').getBoundingClientRect()
-            let inside =
-            e.clientX-25 >= boxRect.left &&
-            e.clientX +25 <= boxRect.right &&
-            e.clientY -25 >= boxRect.top &&
-            e.clientY+25 <= boxRect.bottom
+           const circleRect = div.getBoundingClientRect();
+const boxRect = document.querySelector('.box').getBoundingClientRect();
+
+const inside =
+    circleRect.left >= boxRect.left + 1 &&
+    circleRect.right <= boxRect.right - 1 &&
+    circleRect.top >= boxRect.top + 1 &&
+    circleRect.bottom <= boxRect.bottom - 1;
             if (!trapped) {
                 div.style.left = e.clientX - 25 + 'px';
                 div.style.top = e.clientY - 25 + "px";
                 if (inside) {
-                    trapped = true 
                     div.style.background = 'var(--purple)'
+                    trapped = true 
                 }
             }else {
                  if (inside) {                  
