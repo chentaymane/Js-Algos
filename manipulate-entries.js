@@ -74,15 +74,15 @@ function cartTotal(obj) {
     })
 }
 
-const groceriesCart = { orange: 500, oil: 20, sugar: 480 }
+// const groceriesCart = { orange: 500, oil: 20, sugar: 480 }
 
-// console.log('Total calories:')
-// console.log(totalCalories(groceriesCart))
-// console.log('Items with low carbs:')
-// console.log(lowCarbs(groceriesCart))
-// console.log('Total cart nutritional facts:')
-// console.log(cartTotal(groceriesCart))
-filterEntries(groceriesCart, ([, v]) => v < 300)
+// // console.log('Total calories:')
+// // console.log(totalCalories(groceriesCart))
+// // console.log('Items with low carbs:')
+// // console.log(lowCarbs(groceriesCart))
+// // console.log('Total cart nutritional facts:')
+// // console.log(cartTotal(groceriesCart))
+// filterEntries(groceriesCart, ([, v]) => v < 300)
 // And its output:
 // Total calories:
 // 2112.2
